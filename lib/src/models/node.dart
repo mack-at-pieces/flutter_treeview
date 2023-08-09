@@ -22,7 +22,7 @@ class Node<T> {
   final String label;
 
   /// An optional icon that is displayed on the [TreeNode].
-  final IconData? icon;
+  final Widget? icon;
 
   /// An optional color that will be applied to the icon for this node.
   final Color? iconColor;
@@ -116,7 +116,7 @@ class Node<T> {
     List<Node>? children,
     bool? expanded,
     bool? parent,
-    IconData? icon,
+    Widget? icon,
     Color? iconColor,
     Color? selectedIconColor,
     T? data,
@@ -147,7 +147,7 @@ class Node<T> {
     Map<String, dynamic> _map = {
       "key": key,
       "label": label,
-      "icon": icon == null ? null : icon!.codePoint,
+      "icon": icon == null ? null : icon!.toStringShort(),
       "iconColor": iconColor == null ? null : iconColor!.toString(),
       "selectedIconColor":
           selectedIconColor == null ? null : selectedIconColor!.toString(),
